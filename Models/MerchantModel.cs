@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -23,13 +24,16 @@ namespace MerchantAPI.Models
         [Key] public int Id { get; set; }
 
         [Required]
+        [Description("Клиентский номер в системе Максипост")]
         public int Client_ID { get; set; }
 
         [MaxLength(41)]
         [Required]
+        [Description("Уникальный код мерчанта")]
         public string Merch_Code { get; set; }
         [MaxLength(100)]
         [Required]
+        [Description("Наименование мерчанта")]
         public string Merch_Name { get; set; }
         [MaxLength(50)]
         public string Last_Name { get; set; }
@@ -45,6 +49,7 @@ namespace MerchantAPI.Models
 
         public int Is_Actual { get; set; }
 
+        [Description("Тип: 0-Склад, 1-ПВЗ, 2-ПОСТАМАТ")]
         public MerchType M_Type { get; set; }
 
         [MaxLength(30)]
@@ -77,13 +82,12 @@ namespace MerchantAPI.Models
         [MaxLength(60)]
         public string Phone_2 { get; set; }
 
+        [Description("Дата добавление мерчанта")]
         public DateTime? Date_Create { get; set; }
 
         public MerchantModel()
         {
-            Client_ID = 206758;
-            Date_Create = DateTime.Now;
-            Is_Actual = 1;
+            
         }
     }
 }

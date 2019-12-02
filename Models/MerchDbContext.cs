@@ -13,13 +13,15 @@ namespace MerchantAPI.Models
     public class MerchDbContext : DbContext
     {
         public DbSet<MerchantModel> Merchants {get;set;}
-
+        public int ClientId { get; set; }
         public MerchDbContext(DbContextOptions<MerchDbContext> options) : base(options)
         {
+            ClientId = 206758;
         }
 
     }
 
+    // для вывода в виде текста SQL запроса
     public static class QueryableExtensions
     {
         private static readonly TypeInfo QueryCompilerTypeInfo = typeof(QueryCompiler).GetTypeInfo();

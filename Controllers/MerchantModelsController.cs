@@ -88,7 +88,9 @@ namespace MerchantAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<MerchantModel>> DeleteMerchantModel([FromQuery]int id)
         {
-            var merchantModel = await _context.Merchants.FindAsync(id);
+            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where ID = {id}").FirstAsync();
+
+            // var merchantModel = await _context.Merchants.FindAsync(id);
             if (merchantModel == null)
             {
                 return NotFound();

@@ -25,9 +25,6 @@ namespace MerchantAPI
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-           // FirebirdEntityProviderConfig config = PgSqlEntityProviderConfig.Instance;
-           // config.Workarounds.DisableQuoting = true;
-           ILoggerFactory loggerFactory = new LoggerFactory();
         }
 
         public IConfiguration Configuration { get; }
@@ -37,9 +34,7 @@ namespace MerchantAPI
         {
             services.AddDistributedMemoryCache();
             services.AddSession();
-
             services.AddDbContext<AppDbContext>(options =>options.UseFirebird(Configuration.GetConnectionString("FbConnection")));
-           // services.AddDbContext<UserDbContext>(options =>options.UseFirebird(Configuration.GetConnectionString("FbConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new OpenApiInfo()
@@ -49,15 +44,11 @@ namespace MerchantAPI
                     Description = "ASP.NET Core Web API"
                 });
             });
-            //services.AddSwaggerGen(x => { x.SwaggerDoc("v1", new OpenApiInfo{Title = "Merchants API", Version = "v1" }); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            if (File.Exists(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt")))
-                File.Delete(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
-
             loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
             var logger = loggerFactory.CreateLogger("FileLogger");
 

@@ -14,27 +14,25 @@ namespace MerchantAPI.Controllers
     [ApiController]
     public class MerchantModelsController : ControllerBase
     {
-        private readonly MerchDbContext _context;
-        
-        
-        public MerchantModelsController(MerchDbContext context)
+        private readonly AppDbContext _context;
+        public MerchantModelsController(AppDbContext context)
         {
             _context = context;
         }
-
+       
         // GET: api/MerchantModels
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MerchantModel>>> GetMerchants()
         {
             //Debug.WriteLine(_context.Merchants.ToSql());
-            return await _context.Merchants.Where(m => m.Client_ID == _context.ClientId).ToListAsync();
+            return await _context.Merchants.Where(m => m.Client_ID == GetClientId()).ToListAsync();
         }
 
         // GET: api/MerchantModels/5
         [HttpGet("{id}")]
         public async Task<ActionResult<MerchantModel>> GetMerchantModel(int id)
         {
-            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_Id = {_context.ClientId} and ID = {id}").FirstAsync(); 
+            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_Id = {GetClientId()} and ID = {id}").FirstAsync(); 
 
             if (merchantModel == null)
             {
@@ -86,11 +84,11 @@ namespace MerchantAPI.Controllers
             
                 if (merchantModelHave)
                 {
-                    ModelState.AddModelError("Error in Merch_Code", $"Код мерчанта [{merchantModel.Merch_Code}] уже есть в базе !");
+                    ModelState.AddModelError("Merch_Code", $"Код мерчанта [{merchantModel.Merch_Code}] уже есть в базе !");
                     return BadRequest(ModelState);
                 }
             
-                merchantModel.Client_ID = _context.ClientId;
+                merchantModel.Client_ID = GetClientId();
                 merchantModel.Date_Create = DateTime.Now;
                 merchantModel.Is_Actual = 1;
 
@@ -107,7 +105,7 @@ namespace MerchantAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<MerchantModel>> DeleteMerchantModel([FromQuery]int id)
         {
-            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_ID = {_context.ClientId} and ID = {id}").FirstAsync();
+            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_ID = {GetClientId()} and ID = {id}").FirstAsync();
 
             // var merchantModel = await _context.Merchants.FindAsync(id);
             if (merchantModel == null)
@@ -125,6 +123,18 @@ namespace MerchantAPI.Controllers
         private bool MerchantModelExists(int id)
         {
             return _context.Merchants.Any(e => e.Id == id);
+        }
+
+        private int GetClientId()
+        {
+            if (HttpContext.Session.Keys.Contains("ClientId"))
+            {
+               return Int32.Parse(HttpContext.Session.GetString("ClientId"));
+            }
+            else
+            {
+               return 0;
+            }
         }
     }
 }

@@ -32,8 +32,11 @@ namespace MerchantAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MerchDbContext>(options =>
-                options.UseFirebird(Configuration.GetConnectionString("FbConnection")));
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+
+            services.AddDbContext<AppDbContext>(options =>options.UseFirebird(Configuration.GetConnectionString("FbConnection")));
+           // services.AddDbContext<UserDbContext>(options =>options.UseFirebird(Configuration.GetConnectionString("FbConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new OpenApiInfo()
@@ -58,7 +61,7 @@ namespace MerchantAPI
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            app.UseSession();
             app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseHttpsRedirection();

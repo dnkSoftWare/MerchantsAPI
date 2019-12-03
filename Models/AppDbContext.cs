@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.EntityFrameworkCore.Query.Internal;
@@ -10,17 +11,19 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 namespace MerchantAPI.Models
 {
-    public class MerchDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<MerchantModel> Merchants {get;set;}
-        public int ClientId { get; set; }
-        public MerchDbContext(DbContextOptions<MerchDbContext> options) : base(options)
+        public DbQuery<UserModel> Users { get; set; }
+        // public int ClientId { get; set; }
+
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-            ClientId = 206758;
+           // ClientId = 0; // 206758;
         }
 
     }
-
+    
     // для вывода в виде текста SQL запроса
     public static class QueryableExtensions
     {

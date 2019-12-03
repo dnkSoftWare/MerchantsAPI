@@ -14,7 +14,7 @@ namespace MerchantAPI.Controllers
     [ApiController]
     public class MerchantModelsController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private AppDbContext _context;
         public MerchantModelsController(AppDbContext context)
         {
             _context = context;
@@ -25,14 +25,30 @@ namespace MerchantAPI.Controllers
         public async Task<ActionResult<IEnumerable<MerchantModel>>> GetMerchants()
         {
             //Debug.WriteLine(_context.Merchants.ToSql());
-            return await _context.Merchants.Where(m => m.Client_ID == GetClientId()).ToListAsync();
+            var clientId = GetClientId();
+            if (clientId > 0)
+            {
+                return await _context.Merchants.Where(m => m.Client_ID == GetClientId()).ToListAsync();
+            }
+            else
+            {
+                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
+                return BadRequest(ModelState);
+            }
         }
 
         // GET: api/MerchantModels/5
         [HttpGet("{id}")]
         public async Task<ActionResult<MerchantModel>> GetMerchantModel(int id)
         {
-            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_Id = {GetClientId()} and ID = {id}").FirstAsync(); 
+            var clientId = GetClientId();
+            if (clientId == 0)
+            {
+                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
+                return BadRequest(ModelState);
+            }
+            
+            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_Id = {clientId} and ID = {id}").FirstAsync(); 
 
             if (merchantModel == null)
             {
@@ -46,8 +62,16 @@ namespace MerchantAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMerchantModel([FromQuery]int id, [FromBody]MerchantModel merchantModel)
         {
+            var clientId = GetClientId();
+            if (clientId == 0)
+            {
+                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
+                return BadRequest(ModelState);
+            }
+
             if (id != merchantModel.Id)
             {
+                ModelState.AddModelError("MerchantModels", $"ID записи не соответствует ID из текущего объекта MerchantModels");
                 return BadRequest();
             }
 
@@ -76,9 +100,17 @@ namespace MerchantAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<MerchantModel>> PostMerchantModel([FromBody]MerchantModel merchantModel)
         {
+            var clientID = GetClientId();
+            if (clientID == 0)
+            {
+                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientID}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
+                return BadRequest(ModelState);
+            }
+
+
             var merchantModelHave =
                 await _context.Merchants.AnyAsync(m => (m.Merch_Code == merchantModel.Merch_Code) &&
-                              (m.Client_ID == merchantModel.Client_ID));
+                              (m.Client_ID == clientID));
 
 
             
@@ -88,7 +120,7 @@ namespace MerchantAPI.Controllers
                     return BadRequest(ModelState);
                 }
             
-                merchantModel.Client_ID = GetClientId();
+                merchantModel.Client_ID = clientID;
                 merchantModel.Date_Create = DateTime.Now;
                 merchantModel.Is_Actual = 1;
 
@@ -96,16 +128,20 @@ namespace MerchantAPI.Controllers
                 await _context.SaveChangesAsync();
 
                 return CreatedAtAction("GetMerchantModel", new {id = merchantModel.Id}, merchantModel);
-            
-            
-
         }
 
         // DELETE: api/MerchantModels/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<MerchantModel>> DeleteMerchantModel([FromQuery]int id)
         {
-            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_ID = {GetClientId()} and ID = {id}").FirstAsync();
+            var clientId = GetClientId();
+            if (clientId == 0)
+            {
+                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
+                return BadRequest(ModelState);
+            }
+
+            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_ID = {clientId} and ID = {id}").FirstAsync();
 
             // var merchantModel = await _context.Merchants.FindAsync(id);
             if (merchantModel == null)

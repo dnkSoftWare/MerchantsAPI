@@ -1,14 +1,111 @@
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+Connection id "0HLRNVGQH952K", Request id "0HLRNVGQH952K:00000003": An unhandled exception was thrown by the application.
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+Connection id "0HLRNVGQH952K", Request id "0HLRNVGQH952K:00000004": An unhandled exception was thrown by the application.
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+Connection id "0HLRNVGQH952K", Request id "0HLRNVGQH952K:00000005": An unhandled exception was thrown by the application.
 Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
-Request finished in 972.5624ms 200 text/html;charset=utf-8
+Request finished in 257.9745ms 200 text/html;charset=utf-8
 Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
-Request finished in 960.6818ms 200 application/json;charset=utf-8
+Request finished in 410.4389ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/MerchantModels  
+Executing endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Route matched with {action = "GetMerchants", controller = "MerchantModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MerchantAPI.Models.MerchantModel]]] GetMerchants() on controller MerchantAPI.Controllers.MerchantModelsController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Accessing expired session, Key:2e0e0cdb-68cd-c9bf-577d-60ffd75cb2e6
+Executed DbCommand (39ms) [Parameters=[@__GetClientId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT m.Id, m.City, m.Client_ID, m.Corp, m.Country, m.Date_Create, m.Description, m.Home, m.Is_Actual, m.Last_Name, m.M_Type, m.Merch_Code, m.Merch_Name, m.Name, m.Office, m.Patr_Name, m.Phone_1, m.Phone_2, m.Region, m.Street
+FROM TMP_MERCHANTS m
+WHERE m.Client_ID = @__GetClientId_0
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+Executed action MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) in 1125.2467ms
+Executed endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 1323.7008ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 401.3163ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 532.3336ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/MerchantModels  
+Executing endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Route matched with {action = "GetMerchants", controller = "MerchantModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MerchantAPI.Models.MerchantModel]]] GetMerchants() on controller MerchantAPI.Controllers.MerchantModelsController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) - Validation state: Valid
+Accessing expired session, Key:2e0e0cdb-68cd-c9bf-577d-60ffd75cb2e6
+Executed action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.BadRequestResult in 48.4587ms.
+Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+Executed action MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) in 353.1345ms
+Executed endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Request finished in 465.0138ms 400 application/problem+json; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 546.7965ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 607.2053ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/MerchantModels  
+Executing endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Route matched with {action = "GetMerchants", controller = "MerchantModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MerchantAPI.Models.MerchantModel]]] GetMerchants() on controller MerchantAPI.Controllers.MerchantModelsController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) - Validation state: Valid
+Accessing expired session, Key:2e0e0cdb-68cd-c9bf-577d-60ffd75cb2e6
+Executed action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 41.9777ms.
+Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+Executed action MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) in 359.3826ms
+Executed endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Request finished in 481.3067ms 400 application/json; charset=utf-8
 Request starting HTTP/1.1 GET https://localhost:5001/api/Users/bc3e77c2657c4374cfa9f23f226adf87  
 Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
-Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
 Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
 Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
 Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
-Executed DbCommand (42ms) [Parameters=[account='?' (Size = 32)], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (40ms) [Parameters=[account='?' (Size = 32)], CommandType='Text', CommandTimeout='30']
 SELECT 
 FIRST 1
  u.Client_Id
@@ -16,9 +113,832 @@ FROM (
     select suc.client_id from site_users su join site_users_clients suc on suc.site_user_id = su.id where  su.is_active = 1 and su.md5_account = @account
 ) u
 Accessing expired session, Key:2e0e0cdb-68cd-c9bf-577d-60ffd75cb2e6
-Executed action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4700.3071ms.
+Executed action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 1056.6627ms.
 Executing ObjectResult, writing value of type 'MerchantAPI.Models.UserModel'.
-Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 5718.3976ms
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 1103.1402ms
 Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
-Session started; Key:2e0e0cdb-68cd-c9bf-577d-60ffd75cb2e6, Id:cf64eda3-bf6c-1385-1e15-a8ade9095574
-Request finished in 5914.5969ms 200 application/json; charset=utf-8
+Session started; Key:2e0e0cdb-68cd-c9bf-577d-60ffd75cb2e6, Id:81b2d002-458f-0bb4-2b89-4ac3e82fce52
+Request finished in 1200.039ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/MerchantModels  
+Executing endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Route matched with {action = "GetMerchants", controller = "MerchantModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MerchantAPI.Models.MerchantModel]]] GetMerchants() on controller MerchantAPI.Controllers.MerchantModelsController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed DbCommand (26ms) [Parameters=[@__GetClientId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT m.Id, m.City, m.Client_ID, m.Corp, m.Country, m.Date_Create, m.Description, m.Home, m.Is_Actual, m.Last_Name, m.M_Type, m.Merch_Code, m.Merch_Name, m.Name, m.Office, m.Patr_Name, m.Phone_1, m.Phone_2, m.Region, m.Street
+FROM TMP_MERCHANTS m
+WHERE m.Client_ID = @__GetClientId_0
+Executed action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 288.2335ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MerchantAPI.Models.MerchantModel, MerchantAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) in 327.6972ms
+Executed endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Request finished in 362.1192ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 220.024ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 348.9209ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/MerchantModels  
+Executing endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Route matched with {action = "GetMerchants", controller = "MerchantModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MerchantAPI.Models.MerchantModel]]] GetMerchants() on controller MerchantAPI.Controllers.MerchantModelsController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) - Validation state: Valid
+Accessing expired session, Key:2e0e0cdb-68cd-c9bf-577d-60ffd75cb2e6
+Executed action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 15.578ms.
+Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+Executed action MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) in 189.7559ms
+Executed endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Request finished in 257.9647ms 400 application/json; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
+Executed DbCommand (39ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id from site_users su join site_users_clients suc on suc.site_user_id = su.id where  su.is_active = 1 and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 897.372ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 1039.577ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/bc3e77c2657c4374cfa9f23f226adf87  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed DbCommand (28ms) [Parameters=[account='?' (Size = 32)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id from site_users su join site_users_clients suc on suc.site_user_id = su.id where  su.is_active = 1 and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 145.1743ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 207.2588ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/bc3e77c2657c4374cfa9f23f226adf87  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed DbCommand (27ms) [Parameters=[account='?' (Size = 32)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id from site_users su join site_users_clients suc on suc.site_user_id = su.id where  su.is_active = 1 and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 67.2992ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 114.8052ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 277.9953ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 344.0366ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 719.1567ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 958.0802ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 6.738ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 80.2571ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 498.2589ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 472.2746ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
+Executed DbCommand (41ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 1852.8774ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 2179.2326ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed DbCommand (29ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 439.9336ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 551.1699ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 404.2811ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 528.2598ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 895.7527ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 1096.0135ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 15.3007ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 89.9797ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 658.4331ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 383.5378ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 1217.4077ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 1496.1692ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 87.6501ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 191.8844ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 518.4863ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 377.6838ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
+Executed DbCommand (36ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 1715.7524ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 1987.9361ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed DbCommand (27ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 251.5953ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 346.0837ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 253.0223ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 336.3136ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
+Executed DbCommand (37ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 1037.4663ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 1207.9718ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed DbCommand (26ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 114.4447ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 216.2319ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 419.5754ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 443.1533ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
+Executed DbCommand (35ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 1779.4153ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 2008.4583ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 596.559ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 342.4421ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
+Executed DbCommand (35ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 1627.492ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 1866.4315ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed DbCommand (27ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 76566.729ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 76678.6482ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 522.6895ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 409.67ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
+Executed DbCommand (33ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 5284.3479ms.
+Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 5608.3595ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Request finished in 5776.2057ms 400 application/json; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/bc3e77c2657c4374cfa9f23f226adf87  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed DbCommand (27ms) [Parameters=[account='?' (Size = 32)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+Accessing expired session, Key:2e0e0cdb-68cd-c9bf-577d-60ffd75cb2e6
+Executed action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5397.8503ms.
+Executing ObjectResult, writing value of type 'MerchantAPI.Models.UserModel'.
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 5422.9172ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Session started; Key:2e0e0cdb-68cd-c9bf-577d-60ffd75cb2e6, Id:97a36e68-661b-865e-d5e4-6c1a1401d954
+Request finished in 5478.9552ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/MerchantModels  
+Executing endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Route matched with {action = "GetMerchants", controller = "MerchantModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MerchantAPI.Models.MerchantModel]]] GetMerchants() on controller MerchantAPI.Controllers.MerchantModelsController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed DbCommand (28ms) [Parameters=[@__GetClientId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT m.Id, m.City, m.Client_ID, m.Corp, m.Country, m.Date_Create, m.Description, m.Home, m.Is_Actual, m.Last_Name, m.M_Type, m.Merch_Code, m.Merch_Name, m.Name, m.Office, m.Patr_Name, m.Phone_1, m.Phone_2, m.Region, m.Street
+FROM TMP_MERCHANTS m
+WHERE m.Client_ID = @__GetClientId_0
+Executed action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 363.6558ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MerchantAPI.Models.MerchantModel, MerchantAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) in 399.3591ms
+Executed endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Request finished in 445.5239ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 528.9646ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 388.6905ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
+Executed DbCommand (38ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 647.475ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 372.4888ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
+Executed DbCommand (35ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.InvalidOperationException: Source sequence doesn't contain any elements.
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 12733.6971ms.
+Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 13096.2488ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Request finished in 13205.26ms 400 application/json; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 250.5349ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 401.3573ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
+Executed DbCommand (39ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 1218.489ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 1407.5114ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/123  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed DbCommand (27ms) [Parameters=[account='?' (Size = 3)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+An exception occurred while iterating over the results of a query for context type 'MerchantAPI.Models.AppDbContext'.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGenerator..ctor(QuerySqlGeneratorDependencies dependencies, SelectExpression selectExpression, IFbOptions fBOptions)
+   at EntityFrameworkCore.FirebirdSql.Query.Sql.Internal.FbQuerySqlGeneratorFactory.CreateDefault(SelectExpression selectExpression)
+   at Microsoft.EntityFrameworkCore.Query.Expressions.SelectExpression.CreateDefaultQuerySqlGenerator()
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.<NotifyReaderCreated>b__14_0(FactoryAndReader s)
+   at Microsoft.EntityFrameworkCore.Internal.NonCapturingLazyInitializer.EnsureInitialized[TParam,TValue](TValue& target, TParam param, Func`2 valueFactory)
+   at Microsoft.EntityFrameworkCore.Query.Internal.ShaperCommandContext.NotifyReaderCreated(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.First_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\First.cs:line 125
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 73.8779ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+An unhandled exception has occurred while executing the request.
+Request finished in 147.5024ms 500 text/html; charset=utf-8

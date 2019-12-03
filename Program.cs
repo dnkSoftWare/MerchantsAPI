@@ -16,8 +16,8 @@ namespace MerchantAPI
     {
         public static void Main(string[] args)
         {
-            //  CreateWebHostBuilder(args).Build().Run();
-            // получаем путь к файлу 
+           CreateWebHostBuilder(args).Build().Run();
+           /* // получаем путь к файлу 
             var pathToExe = Process.GetCurrentProcess().MainModule.FileName;
             // путь к каталогу проекта
             var pathToContentRoot = Path.GetDirectoryName(pathToExe);
@@ -27,7 +27,7 @@ namespace MerchantAPI
                 .UseStartup<Startup>()
                 .Build();
             // запускаем в виде службы
-            host.RunAsService();
+            host.RunAsService();  */
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

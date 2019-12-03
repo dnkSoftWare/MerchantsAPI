@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using MerchantAPI.Logger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +27,7 @@ namespace MerchantAPI
             Configuration = configuration;
            // FirebirdEntityProviderConfig config = PgSqlEntityProviderConfig.Instance;
            // config.Workarounds.DisableQuoting = true;
+           ILoggerFactory loggerFactory = new LoggerFactory();
         }
 
         public IConfiguration Configuration { get; }
@@ -50,20 +53,26 @@ namespace MerchantAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            if (File.Exists(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt")))
+                File.Delete(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
+
+            loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
+            var logger = loggerFactory.CreateLogger("FileLogger");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
             else
             {
+
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
             app.UseSession();
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
+
             app.UseHttpsRedirection();
             app.UseMvc();
 
@@ -73,8 +82,8 @@ namespace MerchantAPI
             app.UseSwagger();
             app.UseSwaggerUI(option =>
             {
-                option.SwaggerEndpoint("/swagger/v1/swagger.json", "Merchants API V1");
-                //option.SwaggerEndpoint(swaggerOptions.UiEndpiont, swaggerOptions.Descriptions);
+               // option.SwaggerEndpoint("/swagger/v1/swagger.json", "Merchants API V1");
+                option.SwaggerEndpoint(swaggerOptions.UiEndpiont, swaggerOptions.Descriptions);
                 //option.RoutePrefix = String.Empty;
             });
 

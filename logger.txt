@@ -1,0 +1,24 @@
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Request finished in 972.5624ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Request finished in 960.6818ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/bc3e77c2657c4374cfa9f23f226adf87  
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
+Executed DbCommand (42ms) [Parameters=[account='?' (Size = 32)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id from site_users su join site_users_clients suc on suc.site_user_id = su.id where  su.is_active = 1 and su.md5_account = @account
+) u
+Accessing expired session, Key:2e0e0cdb-68cd-c9bf-577d-60ffd75cb2e6
+Executed action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4700.3071ms.
+Executing ObjectResult, writing value of type 'MerchantAPI.Models.UserModel'.
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 5718.3976ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Session started; Key:2e0e0cdb-68cd-c9bf-577d-60ffd75cb2e6, Id:cf64eda3-bf6c-1385-1e15-a8ade9095574
+Request finished in 5914.5969ms 200 application/json; charset=utf-8

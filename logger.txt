@@ -942,3 +942,58 @@ Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 73.
 Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
 An unhandled exception has occurred while executing the request.
 Request finished in 147.5024ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+Error unprotecting the session cookie.
+Request finished in 445.7447ms 200 text/html;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+Error unprotecting the session cookie.
+Request finished in 409.1057ms 200 application/json;charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/MerchantModels  
+Error unprotecting the session cookie.
+Executing endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Route matched with {action = "GetMerchants", controller = "MerchantModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MerchantAPI.Models.MerchantModel]]] GetMerchants() on controller MerchantAPI.Controllers.MerchantModelsController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) - Validation state: Valid
+Executed action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 36.8303ms.
+Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+Executed action MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) in 314.2555ms
+Executed endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Request finished in 419.8ms 400 application/json; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/Users/bc3e77c2657c4374cfa9f23f226adf87  
+Error unprotecting the session cookie.
+Executing endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MerchantAPI.Models.UserModel]] Get(System.String) on controller MerchantAPI.Controllers.UsersController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Query: '(from UserModel <generated>_2 in DbSet<UserModel> select [<generated>_2]).First()' uses First/FirstOrDefault/Last/LastOrDefault operation without OrderBy and filter which may lead to unpredictable results.
+Executed DbCommand (37ms) [Parameters=[account='?' (Size = 32)], CommandType='Text', CommandTimeout='30']
+SELECT 
+FIRST 1
+ u.Client_Id
+FROM (
+    select suc.client_id 
+     from site_users su 
+      join site_users_clients suc on suc.site_user_id = su.id 
+     where  
+          su.is_active = 1 
+      and su.md5_account = @account
+) u
+Executed action method MerchantAPI.Controllers.UsersController.Get (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 912.2009ms.
+Executing ObjectResult, writing value of type 'MerchantAPI.Models.UserModel'.
+Executed action MerchantAPI.Controllers.UsersController.Get (MerchantAPI) in 936.137ms
+Executed endpoint 'MerchantAPI.Controllers.UsersController.Get (MerchantAPI)'
+Session started; Key:dde55f1f-c9f5-50f7-97f1-3cedf8977e2f, Id:9721f3d2-0982-5580-c5be-df7055cf763a
+Request finished in 1001.37ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET https://localhost:5001/api/MerchantModels  
+Executing endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Route matched with {action = "GetMerchants", controller = "MerchantModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MerchantAPI.Models.MerchantModel]]] GetMerchants() on controller MerchantAPI.Controllers.MerchantModelsController (MerchantAPI).
+Executing action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) - Validation state: Valid
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDbContext' using provider 'EntityFrameworkCore.FirebirdSql' with options: None
+Executed DbCommand (25ms) [Parameters=[@__GetClientId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT m.Id, m.City, m.Client_ID, m.Corp, m.Country, m.Date_Create, m.Description, m.Home, m.Is_Actual, m.Last_Name, m.M_Type, m.Merch_Code, m.Merch_Name, m.Name, m.Office, m.Patr_Name, m.Phone_1, m.Phone_2, m.Region, m.Street
+FROM TMP_MERCHANTS m
+WHERE m.Client_ID = @__GetClientId_0
+Executed action method MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 222.0413ms.
+Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MerchantAPI.Models.MerchantModel, MerchantAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI) in 236.352ms
+Executed endpoint 'MerchantAPI.Controllers.MerchantModelsController.GetMerchants (MerchantAPI)'
+Request finished in 245.8985ms 200 application/json; charset=utf-8

@@ -58,6 +58,7 @@ namespace MerchantAPI.Controllers
 
             var record_affected =
                 await _context.Database.ExecuteSqlCommandAsync($"execute procedure add_client_warehouses({clientId});");
+
             return record_affected;
         }
         

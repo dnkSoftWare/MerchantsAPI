@@ -13,6 +13,7 @@
     <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="7.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc4" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.0.0-rc5" />
   </ItemGroup>
 
   <ItemGroup>

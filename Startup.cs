@@ -14,6 +14,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MerchantAPI.Models;
+using Microsoft.OpenApi.Extensions;
+using Microsoft.OpenApi.Interfaces;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger; 
 using SwaggerOptions = MerchantAPI.Options.SwaggerOptions;
@@ -42,7 +44,9 @@ namespace MerchantAPI
                     Version = "v1",
                     Title = "Merchants API",
                     Description = "ASP.NET Core Web API"
+                    
                 });
+                c.EnableAnnotations();
             });
         }
 

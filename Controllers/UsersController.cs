@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace MerchantAPI.Controllers
 {
@@ -23,19 +24,7 @@ namespace MerchantAPI.Controllers
         }
 
         // GET: api/Users/bc3e77c2657c4374cfa9f23f226adf87
-       /* [HttpGet("{account}", Name = "Get")]
-        public ActionResult<UserModel> Get(string account)
-        {
-            FbParameter account_param = new FbParameter("account", FbDbType.VarChar);
-            account_param.Value = account;
-            // RawSqlString sql = new RawSqlString($"select suc.client_id from site_users su join site_users_clients suc on suc.site_user_id = su.id where  su.is_active = 1 and su.md5_account = '{account}'");
-            var userModels = dbUsers.Query<UserModel>().FromSql("select suc.client_id from site_users su join site_users_clients suc on suc.site_user_id = su.id where  su.is_active = 1 and su.md5_account = @account",account_param).First();
-
-            HttpContext.Session.SetString("ClientId", userModels.Client_Id.ToString());
-
-            return userModels;
-        }*/
-
+        [SwaggerOperation(Summary = "Получение кода клиента Макссипост по user account для web-api")]
         [HttpGet("{account}", Name = "Get")]
         public async Task<ActionResult<UserModel>> Get(string account)
         {   
@@ -46,8 +35,8 @@ namespace MerchantAPI.Controllers
             {
                 var users = await context.Query<UserModel>()
                     .FromSql(
-                        "select suc.client_id \n from site_users su \n  join site_users_clients suc on suc.site_user_id = su.id \n where  \n      su.is_active = 1 \n  and su.md5_account = @account",
-                        account_param).FirstAsync();
+                        "select suc.client_id from site_users su join site_users_clients suc on suc.site_user_id = su.id where su.is_active = 1 and su.md5_account = @account",
+                        account_param).FirstOrDefaultAsync();
 
                 if (users != null)
                 {

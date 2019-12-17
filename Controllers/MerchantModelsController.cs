@@ -37,6 +37,22 @@ namespace MerchantAPI.Controllers
             }
         }
 
+        // GET: api/MerchantModels/load
+        [HttpGet("load")]
+        public async Task<ActionResult<int>> Load()
+        {
+            var clientId = GetClientId();
+            if (clientId == 0)
+            {
+                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
+                return BadRequest(ModelState);
+            }
+
+            var record_affected =
+                await _context.Database.ExecuteSqlCommandAsync($"execute procedure add_client_warehouses({clientId}, 10);");
+            return record_affected;
+        }
+        
         // GET: api/MerchantModels/5
         [HttpGet("{id}")]
         public async Task<ActionResult<MerchantModel>> GetMerchantModel(int id)
@@ -48,7 +64,7 @@ namespace MerchantAPI.Controllers
                 return BadRequest(ModelState);
             }
             
-            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_Id = {clientId} and ID = {id}").FirstAsync(); 
+            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_Id = {clientId} and ID = {id}").FirstOrDefaultAsync(); 
 
             if (merchantModel == null)
             {
@@ -141,7 +157,7 @@ namespace MerchantAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_ID = {clientId} and ID = {id}").FirstAsync();
+            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_ID = {clientId} and ID = {id}").FirstOrDefaultAsync();
 
             // var merchantModel = await _context.Merchants.FindAsync(id);
             if (merchantModel == null)
@@ -149,7 +165,11 @@ namespace MerchantAPI.Controllers
                 return NotFound();
             }
 
-            _context.Merchants.Remove(merchantModel);
+            merchantModel.Is_Actual = 0; // Помечаем как не актуальный
+
+            _context.Entry(merchantModel).State = EntityState.Modified;
+                //_context.Merchants.Update(merchantModel); 
+
             await _context.SaveChangesAsync();
 
             return merchantModel;

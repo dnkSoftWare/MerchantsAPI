@@ -50,18 +50,10 @@ namespace MerchantAPI.Controllers
                 }
             
             }
-            catch (InvalidOperationException e)
+            catch (Exception e)
             {
-                
-                if (e.Message.Contains("Source sequence doesn't contain any elements."))
-                {
-                    ModelState.AddModelError("GetClientID", $"Код клиента не найден!");
-                    return BadRequest(ModelState);
-                }
-                else
-                {
-                    return BadRequest(e);
-                }
+                ModelState.AddModelError("GetClientID", e.Message);
+                return BadRequest(ModelState);
             }
             
         }

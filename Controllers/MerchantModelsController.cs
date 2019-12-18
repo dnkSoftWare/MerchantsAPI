@@ -27,17 +27,27 @@ namespace MerchantAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MerchantModel>>> GetMerchants()
         {
-            //Debug.WriteLine(_context.Merchants.ToSql());
-            var clientId = GetClientId();
-            if (clientId > 0)
+            if(Authorized())
             {
                 return await _context.Merchants.Where(m => m.Client_ID == GetClientId()).ToListAsync();
             }
             else
             {
-                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
-                return BadRequest(ModelState);
+                return Unauthorized();
+//                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
+//                return BadRequest(ModelState);
             }
+        }
+
+        private bool Authorized()
+        {
+            return GetClientId() > 0;
+        }
+
+        private bool Authorized(out int clientId)
+        {
+            clientId = GetClientId();
+            return clientId > 0;
         }
 
         // GET: api/MerchantModels/load
@@ -49,39 +59,43 @@ namespace MerchantAPI.Controllers
         [HttpGet("load")]
         public async Task<ActionResult<int>> Load()
         {
-            var clientId = GetClientId();
-            if (clientId == 0)
+
+            if (Authorized())
             {
-                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
-                return BadRequest(ModelState);
+                var record_affected =
+                    await _context.Database.ExecuteSqlCommandAsync(
+                        $"execute procedure add_client_warehouses({GetClientId()});");
+                return record_affected;
             }
-
-            var record_affected =
-                await _context.Database.ExecuteSqlCommandAsync($"execute procedure add_client_warehouses({clientId});");
-
-            return record_affected;
+            else
+            {
+//                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
+//                return BadRequest(ModelState);
+                return Unauthorized();
+            }
         }
-        
+
         // GET: api/MerchantModels/5
         [SwaggerOperation(Summary = "Получение данных мерчанта по ID")]
         [HttpGet("{id}")]
         public async Task<ActionResult<MerchantModel>> GetMerchantModel(int id)
         {
-            var clientId = GetClientId();
-            if (clientId == 0)
-            {
-                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
-                return BadRequest(ModelState);
-            }
-            
-            var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_Id = {clientId} and ID = {id}").FirstOrDefaultAsync(); 
 
-            if (merchantModel == null)
+            if (Authorized())
             {
-                return NotFound();
+              var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_Id = {GetClientId()} and ID = {id}").FirstOrDefaultAsync(); 
+                if (merchantModel == null)
+                {
+                    return NotFound();
+                }
+                return merchantModel;
             }
-
-            return merchantModel;
+                else
+            {
+//                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
+//                return BadRequest(ModelState);
+                return Unauthorized();
+            }
         }
 
         // PUT: api/MerchantModels/5
@@ -89,11 +103,11 @@ namespace MerchantAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMerchantModel([FromQuery]int id, [FromBody]MerchantModel merchantModel)
         {
-            var clientId = GetClientId();
-            if (clientId == 0)
+            if (!Authorized())
             {
-                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
-                return BadRequest(ModelState);
+//                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
+//                return BadRequest(ModelState);
+                return Unauthorized();
             }
 
             if (id != merchantModel.Id)
@@ -128,20 +142,18 @@ namespace MerchantAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<MerchantModel>> PostMerchantModel([FromBody]MerchantModel merchantModel)
         {
-            var clientID = GetClientId();
-            if (clientID == 0)
+            int clientID = 0;
+            if (!Authorized(out clientID))
             {
-                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientID}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
-                return BadRequest(ModelState);
+//                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientID}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
+//                return BadRequest(ModelState);
+                return Unauthorized();
             }
-
 
             var merchantModelHave =
                 await _context.Merchants.AnyAsync(m => (m.Merch_Code == merchantModel.Merch_Code) &&
                               (m.Client_ID == clientID));
 
-
-            
                 if (merchantModelHave)
                 {
                     ModelState.AddModelError("Merch_Code", $"Код мерчанта [{merchantModel.Merch_Code}] уже есть в базе !");
@@ -163,11 +175,12 @@ namespace MerchantAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<MerchantModel>> DeleteMerchantModel([FromQuery]int id)
         {
-            var clientId = GetClientId();
-            if (clientId == 0)
+            var clientId = 0;
+            if (!Authorized(out clientId))
             {
-                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
-                return BadRequest(ModelState);
+//                ModelState.AddModelError("MerchantModels", $"Код клиента [{clientId}] не определён! Для получения кода вызовите метод GET: api/Users/XXXX где XXXX ваш аккаунт в системе Максипост.");
+//                return BadRequest(ModelState);
+                return Unauthorized();
             }
 
             var merchantModel = await _context.Merchants.FromSql($"select * from TMP_MERCHANTS where Client_ID = {clientId} and ID = {id}").FirstOrDefaultAsync();
@@ -182,7 +195,7 @@ namespace MerchantAPI.Controllers
 
             _context.Entry(merchantModel).State = EntityState.Modified;
             //_context.Merchants.Update(merchantModel); 
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(); // Фиксим в БД
 
             return merchantModel;
         }
@@ -199,7 +212,7 @@ namespace MerchantAPI.Controllers
         }
 
         /// <summary>
-        /// ВытаСкайп? скиваем ClientId если она есть в сессионной переменной!
+        /// Вытаскиваем ClientId если она есть в сессионной переменной!
         /// </summary>
         /// <returns></returns>
         private int GetClientId()

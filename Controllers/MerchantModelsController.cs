@@ -181,8 +181,7 @@ namespace MerchantAPI.Controllers
             merchantModel.Is_Actual = 0; // Помечаем как не актуальный
 
             _context.Entry(merchantModel).State = EntityState.Modified;
-                //_context.Merchants.Update(merchantModel); 
-
+            //_context.Merchants.Update(merchantModel); 
             await _context.SaveChangesAsync();
 
             return merchantModel;
@@ -200,7 +199,7 @@ namespace MerchantAPI.Controllers
         }
 
         /// <summary>
-        /// Вытаскиваем ClientId если она есть в сессионной переменной!
+        /// ВытаСкайп? скиваем ClientId если она есть в сессионной переменной!
         /// </summary>
         /// <returns></returns>
         private int GetClientId()
